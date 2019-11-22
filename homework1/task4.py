@@ -9,9 +9,11 @@ def task4():
     strnum = input("Данная программа ищет самую большую цифру в вашем числе.\nВведите целое положительное число:\n")
 
     highest_digit = int(strnum[0])
-    for digit in strnum:
-        if int(digit) > highest_digit:
-            highest_digit = int(digit)
+    i = 1
+    while i < len(strnum):
+        if int(strnum[i]) > highest_digit:
+            highest_digit = int(strnum[i])
+        i += 1
 
     print(f"Самая большая цифра: {highest_digit}")
 
