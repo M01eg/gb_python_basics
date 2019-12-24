@@ -9,17 +9,19 @@
 '''
 
 def task1():
-    superlist = [42, 3.14, True, "USSR"]
+    superlist = [42, 3.14, True, "USSR", {"login": "Dragon", "password": "SecretWord123"}]
 
     print(isinteger(superlist[0]))
     print(isfloat(superlist[1]))
     print(isboolean(superlist[2]))
     print(isstring(superlist[3]))
+    print(isdictionary(superlist[4]))
 
-    print(isinteger(superlist[3]))
-    print(isfloat(superlist[2]))
-    print(isboolean(superlist[1]))
-    print(isstring(superlist[0]))
+    print(isinteger(superlist[4]))
+    print(isfloat(superlist[3]))
+    print(isboolean(superlist[2]))
+    print(isstring(superlist[1]))
+    print(isdictionary(superlist[0]))
 
 
 
@@ -34,6 +36,9 @@ def isboolean(elem):
     
 def isstring(elem):
     return type(elem) == str
+
+def isdictionary(elem):
+    return type(elem) == dict
 
 
 if __name__ == "__main__":
