@@ -21,6 +21,7 @@
 
 def task6():
     lessons_overall = {}
+    # !!!! Поправьте кодировку по вашему усмотрению !!!!
     with open("test6.txt", encoding="utf-8") as f:
         for line in f:
             words = line.split()
