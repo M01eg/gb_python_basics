@@ -21,7 +21,7 @@
 
 def task6():
     lessons_overall = {}
-    with open("test6.txt") as f:
+    with open("test6.txt", encoding="utf-8") as f:
         for line in f:
             words = line.split()
             n_lessons = 0
