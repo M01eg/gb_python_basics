@@ -11,6 +11,7 @@
 def task3():
     n_employees = 0
     salary_overall = 0
+    # !!!! Поправьте кодировку по вашему усмотрению !!!!
     with open("test3.txt", encoding="utf-8") as f:
         print(f"Оклад менее 20000 рублей у следующих сотрудников: ")
         for line in f:
