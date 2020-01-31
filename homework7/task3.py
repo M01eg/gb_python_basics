@@ -50,7 +50,9 @@
 
 class Cell:
     def __init__(self, n_microcells):
-        self.n_microcells = n_microcells
+        if type(n_microcells) != int or int(n_microcells) <= 0:
+            raise "Ошибка: число клеток должно быть целым положительным числом"
+        self.n_microcells = int(n_microcells)
 
     def __add__(self, other):
         return Cell(self.n_microcells + other.n_microcells)
@@ -71,9 +73,12 @@ class Cell:
 
 
 def task3():
-    c1 = Cell(4)
+    c1 = Cell(44)
+    c2 = Cell(2)
+    c3 = c1 - c2
+    print(c3.make_order(20) + "\n")
     c2 = Cell(5)
-    c3 = c1 * c2
+    c3 = c3 / c2
     print(c3.make_order(6))
 
 
